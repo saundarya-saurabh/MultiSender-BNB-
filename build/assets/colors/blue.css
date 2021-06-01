@@ -1,0 +1,54 @@
+/*  Theme Name: Hiric | Responsive Bootstrap Landing Template
+    Author: Themesbrand
+    Version: 1.1.0
+    File Description: Main CSS file of the template
+*/
+
+
+.text-custom,.read-btn,
+.navbar-custom.navbar-white .navbar-nav li.active a,
+.navbar-custom.navbar-white .navbar-nav li a:hover,
+.navbar-custom.navbar-white .navbar-nav li a:focus,
+.navbar-custom.navbar-white .navbar-nav li a:active,
+.play-btn,.blog-title:hover,.social-icon:hover i{
+    color: #3FA7D6 !important;
+}
+
+
+.section-title-border, .bg-custom, .btn-custom,.features-item-list li:before,.process-left-icon-1 i,
+.process-left-icon-2 i{
+    background-color: #3FA7D6;
+}
+
+
+.btn-custom,.play-btn{
+    border-color:#3FA7D6 !important;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom{
+	background-color: #3f9dc7;
+}
+
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom{
+	border-color: #3f9dc7 !important;
+}
+
+
+
