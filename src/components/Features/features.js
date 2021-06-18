@@ -402,11 +402,11 @@ export default function Features(props) {
                 <h4>Please wait till your initialization completes</h4>
               </ModalBody>
             </Modal>
-            {/* <Modal isOpen={transWait} style={{ top: "20%" }}>
+            {<Modal isOpen={transWait} style={{ top: "20%" }}>
               <ModalBody>
                 <h4>Please wait till your transaction is mined</h4>
               </ModalBody>
-            </Modal> */}
+            </Modal>}
             <Col lg={{ size: 1, order: 3 }} xs={{ order: 2 }}></Col>
 
             <Col
