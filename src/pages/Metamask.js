@@ -14,6 +14,7 @@ export default class Metamask extends Component {
             MultiSender: null, 
             loaded:false, 
             walletConnected: false,
+            netId:null
         }
     }
 
@@ -29,28 +30,37 @@ export default class Metamask extends Component {
         await ethereum.enable();
         console.log(web3);
    
-        
+        const netId=await web3.eth.net.getId();
+        console.log(netId);
+        this.setState({netId})
    
        const accounts = await web3.eth.getAccounts();
-   
+       console.log(accounts)
        const MultiSender = new web3.eth.Contract(MultiSenderContract,"0x5D007190CfD702ebEAd392287eD3CDFa0ff545Bb")
        console.log(MultiSender)
-   
+        if(this.state.netId===97){
          this.setState({web3,accounts, MultiSender, loaded:true, walletConnected:true, vipAddress:true });
-   
+        }
+        else{
+          window.alert("Please connect to BSC Mainnet");
+        }
        }
 
     render() {
-        if (!this.state.loaded) {
+        if (!this.state.loaded  ) {
        
          return(
+           
            <Index3 
              walletConnected={this.state.walletConnected} 
              handleConnectWallet = {this.handleConnectWallet}
              
            />
+           
+           
          )
        }
+       else{
          return (
            <React.Fragment>
              <Index3 
@@ -62,7 +72,8 @@ export default class Metamask extends Component {
               
                
                />
+               
          </React.Fragment>
        );
-    }
+    }}
 }

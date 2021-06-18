@@ -180,7 +180,7 @@ export default function Features(props) {
   const sendEther = async () => {
     setTransWait(true);
     if (props.multiSender === undefined) {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Connect to wallet first`),
         icon: "error",
@@ -189,7 +189,7 @@ export default function Features(props) {
     }
 
     if (totalEtherAmount === "") {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Upload CSV first`),
         icon: "error",
@@ -198,7 +198,7 @@ export default function Features(props) {
     }
 
     if (etherAddresses.length > 150) {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Please upload upto 150 Addresses only`),
         icon: "error",
@@ -252,21 +252,21 @@ export default function Features(props) {
     // }
 
     if (props.multiSender === undefined) {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Connect to wallet first`),
         icon: "error",
       });
       return;
     } else if (ERC20Address === "") {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Please Enter Token Address first`),
         icon: "error",
       });
       return;
     } else if (tokenAddresses === []) {
-        setTransWait(false)
+        
       swal({
         content: generateElement(`Upload CSV file first`),
         icon: "error",
@@ -402,11 +402,11 @@ export default function Features(props) {
                 <h4>Please wait till your initialization completes</h4>
               </ModalBody>
             </Modal>
-            <Modal isOpen={transWait} style={{ top: "20%" }}>
+            {/* <Modal isOpen={transWait} style={{ top: "20%" }}>
               <ModalBody>
                 <h4>Please wait till your transaction is mined</h4>
               </ModalBody>
-            </Modal>
+            </Modal> */}
             <Col lg={{ size: 1, order: 3 }} xs={{ order: 2 }}></Col>
 
             <Col
